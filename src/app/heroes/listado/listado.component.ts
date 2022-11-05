@@ -1,0 +1,16 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-listado',
+  templateUrl: './listado.component.html'
+})
+export class ListadoComponent  {
+  heroes:string[] = ['Spiderman','Ironman','Superman'];
+  heroeBorrado:string=''
+  borrarHeroe(){
+    const heroeBorrado=this.heroes.pop() ||'';
+    this.heroeBorrado= heroeBorrado;
+    console.log(heroeBorrado);
+  }
+
+}
